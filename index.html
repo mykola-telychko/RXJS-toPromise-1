@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- jQuery library -->
+    <script src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.8/dist/global/Rx.umd.js"></script>
+    <script>
+      // https://www.learnrxjs.io/learn-rxjs/operators/utility/topromise
+      // Example 1: Basic Promise
+
+      //return basic observable
+      const sample = (val) => Rx.Observable.of(val).delay(5000);
+      //convert basic observable to promise
+      const example = sample('First Example')
+        .toPromise()
+        //output: 'First Example'
+        .then((result) => {
+          console.log('From Promise:', result);
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
