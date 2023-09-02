@@ -7,13 +7,13 @@
       // Example 1: Basic Promise
 
       //return basic observable
-      const sample = (val) => Rx.Observable.of(val).delay(5000);
+      const RxObs$ = (val) => Rx.Observable.of(val).delay(5000);
       //convert basic observable to promise
-      const example = sample('First Example')
+      const example = RxObs$('promise-args')
         .toPromise()
         //output: 'First Example'
         .then((result) => {
-          console.log('From Promise:', result);
+          console.log('FromProm:', result);
         });
     </script>
   </head>
